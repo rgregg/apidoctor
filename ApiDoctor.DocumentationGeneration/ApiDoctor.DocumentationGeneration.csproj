@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="mustache-sharp" Version="0.2.10" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ApiDoctor.Validation\ApiDoctor.Validation.csproj" />
+    <ProjectReference Include="..\OSS\mustache-sharp\mustache-sharp\mustache-sharp-core.csproj" />
   </ItemGroup>
 
 </Project>
