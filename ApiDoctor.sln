@@ -143,5 +143,7 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = OneDrive.ApiDocumentation.CommandLine\OneDrive.ApiDocumentation.Console.csproj
+		description = API Doctor makes your documentation easier!
+		version = 1.0.0
 	EndGlobalSection
 EndGlobal
