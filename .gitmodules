@@ -1,6 +1,0 @@
-[submodule "OSS/markdowndeep"]
-	path = OSS/markdowndeep
-	url = https://github.com/rgregg/markdowndeep.git
-[submodule "OSS/mustache-sharp"]
-	path = OSS/mustache-sharp
-	url = git@github.com:huchim/mustache-sharp.git
