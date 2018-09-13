@@ -17,4 +17,8 @@
     <ProjectReference Include="..\OSS\markdowndeep\MarkdownDeep\MarkdownDeep.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Include="TableSpec/TableAndHeaderConfig.json" />
+  </ItemGroup>
+
 </Project>

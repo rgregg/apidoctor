@@ -26,6 +26,9 @@
 namespace ApiDoctor.Validation.TableSpec
 {
     using System;
+    using System.IO;
+    using System.Text;
+    using System.Reflection;
     using System.Collections.Generic;
     using System.Linq;
     using ApiDoctor.Validation.Error;
@@ -300,7 +303,8 @@ namespace ApiDoctor.Validation.TableSpec
 
         private static TableParserConfigFile LoadDefaultConfiguration()
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<TableParserConfigFile>(Properties.Resources.DefaultTableParserConfig);
+            string defaultData = "{\"tableDefinitions\":{\"tables\":[{\"type\":\"AuthScopes\",\"titles\":[\"Authentication Scopes\"],\"parseAs\":\"AuthScopeDefinition\"},{\"type\":\"EnumerationValues\",\"titles\":[\"Enumerated Values\"],\"parseAs\":\"EnumerationDefinition\"},{\"type\":\"ErrorCodes\",\"parseAs\":\"ErrorDefinition\",\"titles\":[\"Error Response\"]},{\"type\":\"HttpHeaders\",\"titles\":[\"Request Headers\",\"Response Headers\"],\"parseAs\":\"ParameterDefinition\"},{\"type\":\"PathParameters\",\"titles\":[\"Path Parameters\"],\"parseAs\":\"ParameterDefinition\"},{\"type\":\"QueryStringParameters\",\"titles\":[\"Query String Parameters\"],\"parseAs\":\"ParameterDefinition\"},{\"type\":\"RequestObjectProperties\",\"titles\":[\"Request Body\"],\"parseAs\":\"ParameterDefinition\"},{\"type\":\"ResourceNavigationPropertyDescriptions\",\"titles\":[\"Relationships\"],\"parseAs\":\"ParameterDefinition\"},{\"type\":\"ResourcePropertyDescriptions\",\"titles\":[\"Properties\",\"Instance Attributes\"],\"parseAs\":\"ParameterDefinition\"}],\"parsingRules\":[{\"type\":\"ErrorDefinition\",\"columns\":{\"httpStatusCode\":[\"HTTP Code\"],\"httpStatusMessage\":[\"Http Error Message\"],\"errorCode\":[\"Error Code\"],\"description\":[\"Error Message\"]}},{\"type\":\"ParameterDefinition\",\"columns\":{\"name\":[\"Parameter Name\",\"Property Name\",\"Name\",\"Relationship name\"],\"type\":[\"Type\",\"Value\"],\"description\":[\"Description\"],\"required\":[\"Description\"]}},{\"type\":\"EnumerationDefinition\",\"columns\":{\"value\":[\"Value\"],\"description\":[\"Description\"]}},{\"type\":\"AuthScopeDefinition\",\"columns\":{\"scope\":[\"Scope Name\"],\"title\":[\"Title\"],\"description\":[\"Description\"],\"required\":[\"Required\"]}}]}}";
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<TableParserConfigFile>(defaultData);
         }
     }
 
